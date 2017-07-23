@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+html{ font-size: 16px;}
+*{ margin:0px; padding: 0px; }
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.xs{font-size: 0.7em}
+.sm {font-size: 0.9em}
+.big{font-size: 1.5em;}
+a:link{text-decoration: none;}
+a:hover{text-decoration: underline;}
+#welcome{ background-color: grey; height: 30px; min-width: 600px;line-height: 30px; padding-left: 64px}
+header h1{font-size: 5em; padding: 24px 0px 64px 144px;}
+#inmain{width: 960px; margin: auto; padding-bottom: 100px;}
+.clear{clear: both;}
+#gallery{
+	width: 108px;
+	height: auto;
+	float: left;
+}
+#gallery img {
+	width: 88px;
+	height: 88px;
+	margin-right: 7px;
+	border: 1px solid #000000;
+	cursor: pointer;
+}
+article{
+	width: 600px;
+	height: auto;
+	float: left;
+}
+article img {
+	width: 600px;
+	height: 800px;
+	border: 1px solid #000000;
+}
+aside {
+	width: 250px;
+	height: auto;
+	float: left;
+}
+
+ #profile {
+	width: 100%;
+	margin: auto;
+}
+#profile table{	margin-left: 16px;}
+.sale{
+	font-size: 0.8em;
+	text-align: center;
+}
+footer {height: 100px; clear: both; text-align: center; line-height: 100px; background-color: grey; color: white; font-size: 0.6em;}

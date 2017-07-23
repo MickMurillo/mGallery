@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xml>
+  <meta>
+    <welcome>Welcome! This is the official mGallery of Artist Name</welcome>
+    <title>mGallery Title</title>
+    <name>Artist Name</name>
+    <birthday>1980</birthday>
+    <location>Earth</location>
+    <bio><![CDATA[
+      <p>I've drawing and painting since a young age. I like japanese manga and anime and my style is proudly influenced by such style.</p>
+      <p>I hope you enjoy what I have to offer here.</p>
+      ]]>
+    </bio>
+  </meta>
+
+  <gallery>
+
+    <path>
+      <thumb>/img/thumb</thumb>
+      <img>/img</img>
+    </path>
+
+    <images>
+      <image thumb-filename="201707230142.gif" img-filename="201707230142.jpg" alt="Red haired warrior fighting to save the world" title="Click to see">1</image>
+      <image thumb-filename="201707230151.gif" img-filename="201707230151.jpg" alt="Loving world" title="Click to see">2</image>
+      <image thumb-filename="201707230156.gif" img-filename="201707230156.jpg" alt="Driving a car" title="Click to see">3</image>
+      <image thumb-filename="201707230149.gif" img-filename="201707230149.jpg" alt="Fashion session" title="Click to see">4</image>
+    </images>
+
+  </gallery>
+
+</xml>

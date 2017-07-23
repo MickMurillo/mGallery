@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta lang="en" charset="UTF-8" />
+<title>Gallery Title</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+function changeImageART(file, alt, title){
+	imageart=document.getElementById("imageart");
+	imageart.src=file;
+	imageart.alt=alt;
+	imageart.title=title;
+}
+
+</script>
+</head>
+
+<body>
+<div id="page">
+<div id="header">M.Publisher Title</div>
+<div id="leftcolumn">
+<div class="sectionTitle">GALLERY</div>
+<img src='http://bymamf.com/illustration/gallery/mini/example-artwork1-by-mick-murillo.jpg' alt='This is a sample title 1' title='This is a sample title 1' onclick='changeImageART("http://bymamf.com/illustration/gallery/mini/example-artwork1-by-mick-murillo.jpg", "This is a sample title 1", "This is a sample title 1")' /><img src='http://bymamf.com/illustration/gallery/mini/example-artwork2-by-mick-murillo.jpg' alt='This is a sample title 2' title='This is a sample title 2' onclick='changeImageART("http://bymamf.com/illustration/gallery/mini/example-artwork2-by-mick-murillo.jpg", "This is a sample title 2", "This is a sample title 2")' /><img src='http://bymamf.com/illustration/gallery/mini/example-artwork3-by-mick-murillo.jpg' alt='This is a sample title 3' title='This is a sample title 3' onclick='changeImageART("http://bymamf.com/illustration/gallery/mini/example-artwork3-by-mick-murillo.jpg", "This is a sample title 3", "This is a sample title 3")' /></div>
+
+<div id="centercolumn">
+<div class="sectionTitle">ARTWORK</div>
+<div class="offer">BUY ORIGINAL |  BUY PRINT |  COMISSION NEW ARTWORK | SUPPORT ON PATREON</div>
+<img id="imageart" src="sampleimg.jpg" alt="sample alt" title="sample title" />
+<div class="offer">BUY ORIGINAL |  BUY PRINT |  COMISSION NEW ARTWORK | SUPPORT ON PATREON</div>
+</div>
+<div id="rightcolumn">
+<div class="sectionTitle">PROFILE<br /></div>
+<div id="profile" align="left">
+<table>
+<tr>
+<td align="right" valign="top"><span class="xsmall">name:</span></td>
+<td>Artist Name</td>
+</tr>
+<tr>
+<td align="right" valign="top"><span class="xsmall">birth:</span></td>
+<td>1980</td>
+</tr>
+<tr>
+<td align="right" valign="top"><span class="xsmall">place:</span></td>
+<td>Earth</td>
+</tr>
+<tr>
+<td align="right" valign="top"><span class="xsmall">bio:</span></td>
+<td><span class="small">I have been creating art since a young age...</span></td>
+</tr>
+</table>
+
+</div>
+</div>
+<div id="footer"></div>
+</div>
+</body>
+</html>
