@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xml>
+  <meta>
+    <welcome>Welcome! This is the official mGallery of Artist Name</welcome>
+    <title>mGallery Title</title>
+    <name>Artist Name</name>
+    <birthday>1980</birthday>
+    <location>Earth</location>
+    <bio>
+      <![CDATA[
+      <p>I've drawing and painting since a young age. I like japanese manga and anime and my style is proudly influenced by such style.</p>
+      <p>I hope you enjoy what I have to offer here.</p>
+      ]]>
+    </bio>
+    <honey>0</honey>
+  </meta>
+
+  <gallery>
+
+    <path>
+      <thumb>thumb/</thumb>
+      <img>img/</img>
+    </path>
+
+    <images>
+      <image thumb-filename="001.jpg" img-filename="001.jpg" alt="Mountain Fuji - Photo 1" title="Click to see"></image>
+      <image thumb-filename="002.jpg" img-filename="002.jpg" alt="Mountain Fuji - Photo 2" title="Click to see"></image>
+      <image thumb-filename="003.jpg" img-filename="003.jpg" alt="Mountain Fuji - Photo 3" title="Click to see"></image>
+      <image thumb-filename="004.jpg" img-filename="004.jpg" alt="Mountain Fuji - Photo 4" title="Click to see"></image>
+      <image thumb-filename="005.jpg" img-filename="005.jpg" alt="Mountain Fuji - Photo 5" title="Click to see"></image>
+      <image thumb-filename="006.jpg" img-filename="006.jpg" alt="Mountain Fuji - Photo 6" title="Click to see"></image>
+      <image thumb-filename="007.jpg" img-filename="007.jpg" alt="Mountain Fuji - Photo 7" title="Click to see"></image>
+      <image thumb-filename="008.jpg" img-filename="008.jpg" alt="Mountain Fuji - Photo 8" title="Click to see"></image>
+    </images>
+
+  </gallery>
+
+</xml>
