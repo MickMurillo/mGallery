@@ -3,7 +3,7 @@
   <meta>
     <welcome>Welcome! This is the official mGallery of Artist Name</welcome>
     <title>mGallery Title</title>
-    <name>Artist Name</name>
+    <name>Artistic Name</name>
     <birthday>1980</birthday>
     <location>Earth</location>
     <bio>
@@ -15,7 +15,7 @@
     <honey>0</honey>
   </meta>
 
-  <gallery>
+  <gallery limit="8" default-image="4">
 
     <path>
       <thumb>thumb/</thumb>

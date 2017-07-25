@@ -8,36 +8,22 @@ function genImaged()
     global $content, $imaged;
 
     foreach ($content->gallery->images->children() as $img) {
-
-      // echo "X VALUE:", $x, "<br />";//test
         foreach ($img->attributes() as $key => $value) {
-
-
-            // echo $key, "=", $value, "<br />";//test
             $imaged[$x][$key] = $value;
-
-            // if ($imaged[$x][$key] =="201707230149.jpg ") {
-            //     echo "current imaged Key: ", key($imaged),"<br />";
-            // }
         }
-
-
-        // echo "<hr />";//test
         $x++;
     }
     return $imaged;
 }
 
 
-// Generates $imagedP with only images intended to be published.
-function genThumbsN($limit)
+// Generates thumbnail nav, $limit tells how many thumbnails.
+function genThumbsN()
 {
     global $content;
     global $imaged;
-    global $imagedP;
-    // echo "Total Images Counted: ",  $content->gallery->images->children()->count(), " Limit: ", $limit, "<br />";
+    global $limit;
 
-    // asort($imaged);// Sorts $imaged (DESC)
 
     $images=$content->gallery->images->children()->count();
     if ($limit<=$images) {
@@ -47,25 +33,17 @@ function genThumbsN($limit)
         $x=$images;
         $last=0;
     }
-    //  echo "X VALUE:", $x, "<br />";
+
     while ($x > $last) {
-        // $imagedP[$x]=$imaged[$x];
-        // echo $imaged[$x]["thumb-filename"], "<br />";
-        // echo $content->gallery->path->thumb;
         $thumbURL=$content->gallery->path->thumb.$imaged[$x]["thumb-filename"];
         $imgURL=$content->gallery->path->img.$imaged[$x]["img-filename"];
         $alt=$imaged[$x]["alt"];
-        //  echo "Hello World! <br />";
-        // echo $thumbURL;
-        genThumb($thumbURL, $imgURL,$alt);
 
-        // genThumb();
+        genThumb($thumbURL, $imgURL, $alt);
+
         $x--;
     }
 }
-
-
-
 
 // Echoes main image.
 function genImg($title, $imgURL, $caption)
@@ -79,62 +57,20 @@ function genThumb($thumbURL, $imgURL, $alt)
     echo "<img src='$thumbURL' alt='$alt' style='background-color: #CCCCCC'  onclick='imageSet(\"$imgURL\");' />";
 }
 
+// Generates the monetization nav bar (Honey), if <honey>true</honey>
 function genHoneyNav()
 {
-  global $content;
-    if ($content->meta->honey==TRUE) {
+    global $content;
+    if ($content->meta->honey==true) {
         ?><nav class="sale">BUY ORIGINAL |  BUY PRINT |  COMISSION NEW ARTWORK | SUPPORT ON PATREON</nav><?php
     }
 }
 
-// Echoes all thumbs of image gallery
-// function genThumbs()
-// {
-//     $thumbURL=$content->gallery->path->thumb+$imaged[$x][thumb-filename];
-//     genThumb($thumbURL, $alt);
-// }
-
-
-
 $content = simplexml_load_file("content.xml") or die("Error: Cannot load content.xml");
-// var_dump($content);
-$imaged = array();
-$imagedP = array();
 
+$imaged = array(); genImaged();
 
+  $limit=$content->gallery['limit'];
+  $default=$content->gallery['default-image'];
+  $imgDefault=$content->gallery->path->img.$imaged["$default"]["img-filename"];
 ?>
-<!DOCTYPE html>
-<html>
-<meta lang="en" charset="UTF-8" />
-<head><title>mGallery Genesis</title></head>
-<body>
-	<hr>
-<?php
-
-
-// echo $content->meta->welcome;
-// echo $content->meta->title;
-// echo $content->meta->name;
-// echo $content->meta->birthday;
-// echo $content->meta->location;
-// echo $content->meta->bio;
-//
-// echo $content->gallery->path->thumb;
-// echo $content->gallery->path->img;
-//
-// echo $imaged[3]["thumb-filename"];
-
-?><hr><?php
-
-genImaged();
-genThumbsN(8);
-$imgDefault=$content->gallery->path->img.$imaged[3]["img-filename"];
-
-// echo $imgDefault;
-?><hr /><?php
-
-
-?>
-
-</body>
-</html>

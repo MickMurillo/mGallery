@@ -31,7 +31,7 @@ function imageSet(imgURL){
 <div id="inmain">
 
 <nav id="gallery">
-  <?php genThumbsN(8); ?>
+  <?php genThumbsN(); ?>
 	</nav>
 
 <article>
@@ -45,7 +45,7 @@ function imageSet(imgURL){
       <div id="profile" align="center">PROFILE
         <table width="100%" border="0" cellspacing="3">
 
-					<tr><td><span class="xs">Name:</span></td></tr>
+					<tr><td><span class="xs">Artist Name:</span></td></tr>
           <tr><td id="name"><?php echo $content->meta->name; ?></td></tr>
 
 					<tr><td><span class="xs">Birth:</span></td></tr>
@@ -75,6 +75,7 @@ All Rights Reserved &copy; <?php echo $content->meta->name; ?> ||| Website runni
 $htmlFile = ob_get_contents();
 ob_end_clean();
 $myfile = fopen("../index.html", "w") or die("Unable to open file!");
-fwrite($myfile, $htmlFile);
+$generated = fwrite($myfile, $htmlFile);
+echo "GENERATED?: ".$generated;
 fclose($myfile);
 ?>
